@@ -1,0 +1,12 @@
+services:
+  portfolio:
+    build: .
+    container_name: my-portfolio
+    ports:
+      - "8080:80"
+
+    mem_limit: 128m
+    mem_reservation: 64m
+    cpus: 0.50
+
+    restart: on-failure:3
